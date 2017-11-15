@@ -15,13 +15,13 @@ import javax.annotation.PostConstruct
 class GraphiteConfig {
 
     @Autowired
-    private val registry: MetricRegistry? = null
+    lateinit var registry: MetricRegistry
 
     @PostConstruct
     fun initialize() {
         val graphite = Graphite(InetSocketAddress("localhost", 2003))
         val reporter = GraphiteReporter.forRegistry(registry)
-                .prefixedWith("demo")
+                .prefixedWith("demo1")
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .filter(MetricFilter.ALL)
