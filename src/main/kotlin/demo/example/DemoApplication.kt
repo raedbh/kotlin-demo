@@ -1,4 +1,4 @@
-package com.example.demo
+package demo.example
 
 import com.ryantenney.metrics.spring.config.annotation.EnableMetrics
 import org.springframework.boot.SpringApplication

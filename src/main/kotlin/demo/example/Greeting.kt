@@ -1,3 +1,3 @@
-package com.example.demo
+package demo.example
 
 data class Greeting(val id: Long, val content: String)

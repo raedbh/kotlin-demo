@@ -1,4 +1,4 @@
-package com.example.demo
+package demo.example
 
 import com.codahale.metrics.MetricFilter
 import com.codahale.metrics.MetricRegistry
@@ -21,7 +21,7 @@ class GraphiteConfig {
     fun initialize() {
         val graphite = Graphite(InetSocketAddress("localhost", 2003))
         val reporter = GraphiteReporter.forRegistry(registry)
-                .prefixedWith("demo1")
+                .prefixedWith("demo.example")
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .filter(MetricFilter.ALL)

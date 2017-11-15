@@ -1,4 +1,4 @@
-package com.example.demo
+package demo.example
 
 import com.codahale.metrics.annotation.Timed
 import org.springframework.web.bind.annotation.GetMapping
