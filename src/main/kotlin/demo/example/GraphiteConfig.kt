@@ -21,7 +21,7 @@ class GraphiteConfig {
     fun initialize() {
         val graphite = Graphite(InetSocketAddress("localhost", 2003))
         val reporter = GraphiteReporter.forRegistry(registry)
-                .prefixedWith("demo.example")
+                .prefixedWith("kotlin-demo")
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .filter(MetricFilter.ALL)
